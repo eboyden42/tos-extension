@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const selected = res[0].result;
                 if (!selected) {
                     alert("Please select text by highlighting it with your cursor.");
+                    initialContentEl.style.display = "flex";
+                    loadingContentEl.style.display = "none";
+                    clearInterval(loadingInterval);
+                    return;
                 } else {
                     // send text to cloudflare
                     console.log("Sending highlighted text to cloudflare...");
@@ -85,5 +89,5 @@ function loadingAnimation(loadingItemEl) {
     return setInterval(() => {
         loadingItemEl.textContent = loadingItems[index];
         index = (index + 1) % loadingItems.length;
-    }, 1500);
+    }, 2000);
 }
