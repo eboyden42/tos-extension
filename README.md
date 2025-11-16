@@ -1,10 +1,9 @@
 # ToS;DR a Terms of Service (ToS) scanning AI Chrome extension
 
 ## Summary
----
 ToS;DR (short for Terms of Service Didn't Read) is an AI chrome extension that lets you scan Terms of Service agreements for suspicious phrasing to protect your digital autonomy, transparency, and privacy. 
+
 ## Introduction and overview
----
 **The problem**
 Who even reads those long droning (ToS) agreements anymore? I know I sure don't. And turns out neither do [87%](https://www.pewresearch.org/internet/2019/11/15/americans-attitudes-and-experiences-with-privacy-policies-and-laws/)  of Americans, although if we're being honest that's an underestimate.
 
@@ -20,8 +19,8 @@ On April Fools day in 2010 the company Gamestation [ran an experiment](https://w
 AI is great at rapidly processing amounts of natural language data that humans cannot. Reading the entire Instagram ToS is a matter of seconds for an AI model (although the entire agreement all at once is currently too much for my free tier LLM), and finding malicious clauses hidden in legal jargon is a trivial task.
 
 What we need is an easy way to send agreements to a specialized AI model for grading, and production of a summary of key points. And we need this solution to be available on any website. The solution I came up with is a chrome extension.
+
 ## Setup and installation
----
 Note that you will need to be using the Chrome web browser.
 
 To use the extension follow these instructions:
@@ -32,8 +31,8 @@ To use the extension follow these instructions:
 4. In the top left click the `load unpacked` button and then select the second "cf_ai_tos_extension-main" folder down in the file structure you just unzipped (the folder with the manifest.json file inside it). 
 5. To make usage easier click the puzzle piece in the top right of the browser, and select the pin to pin the ToS;DR extension.
 6. To open up the extension popup click the orange magnifying glass.
+
 ## Usage
----
 After you have the chrome extension installed, highlight your ToS agreement (for examples of ToS agreements to try see below), click the orange magnifying glass icon in the top right, and then click SCAN.
 
 The extension will then take the selected text, and send it to my Workers AI instance of llama 3.3 for processing. The system prompt has a variety of analysis metrics, including transparency, privacy, content ownership, and contract termination. It also provides examples of green flags and red flags in a user agreement.
@@ -52,7 +51,6 @@ After a score is produced, the extension also allows you to input whether you ac
 If you lose your entire soul, don't worry, you can also reset the soul meter back to 100%.
 
 ## Some good ToS to try it out on
----
 Here is a list of ToS agreements (and other types of documents) that I tried the extension out on during development. Your individual mileage may vary.
 
 1. [Instagram Terms of Use](https://help.instagram.com/581066165581870/?locale=en_GB)
