@@ -112,6 +112,9 @@ document.getElementById("accept-btn").addEventListener("click", () => {
 document.getElementById("reject-btn").addEventListener("click", () => {
     aiContentEl.style.display = "none";
     soulContentEl.style.display = "flex";
+    updateSoul(0, (soul) => {
+        soulFillEl.style.width = soul + "%"; // just for correct soul meter
+    })
 });
 
 // scan again button
